@@ -1,134 +1,19 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
   <title>ardhanubmp</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+<link rel="stylesheet" type="text/css" href="styles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
 <script src="https://fb.me/react-15.0.0-rc.2.js"></script>
+<script type="text/babel" src="app.js"> </script>
 <script src="https://fb.me/react-dom-15.0.0-rc.2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
-  <style>
-    body {
-      background-color: #FFCC00;
-      padding: 20px;
-      margin: 0;
-    }
-    h1, h2, p, ul, li {
-      font-family: Helvetica, Arial, sans-serif;
-    }
-    ul.header li {
-      display: inline;
-      list-style-type: none;
-      margin: 0;
-    }
-    ul.header {
-      background-color: #111;
-      padding: 0;
-    }
-    ul.header li a {
-      color: #FFF;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 20px;
-      display: inline-block;
-    }
-    .content {
-      background-color: #FFF;
-      padding: 20px;
-    }
-    .content h2 {
-      padding: 0;
-      margin: 0;
-    }
-    .content li {
-      margin-bottom: 10px;
-    }
-  </style>
+<!-- ardhanubismomp -->
 </head>
-  
 <body>
-  
   <div id="apps"></div>
-  
-  <script type="text/babel">
-  var { Router, Route, IndexRoute, IndexLink, Link } = ReactRouter;
-    var destination = document.querySelector("#apps");
-    
-    var Home = React.createClass({
-      render: function() {
-          return (
-            <div>
-              <h2>HELLO</h2>
-              <p>Cras facilisis urna ornare ex volutpat, et
-              convallis erat elementum. Ut aliquam, ipsum vitae
-              gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-              metus nec massa. Maecenas hendrerit laoreet augue
-              nec molestie. Cum sociis natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.</p>
-              <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
-            </div>
-          );
-        }
-    });
-
-    var Contact = React.createClass({
-      render: function(){
-      return (
-        <div>
-        <div>Contact</div>
-        <h2>ardhanu bismo m p</h2>  
-        </div>
-
-      );
-      }
-    });
-
-    var Stuff = React.createClass({
-      render: function(){
-        return (
-          <div>
-            <h2>Portofolio</h2>
-            <div>lorem ipsum stuff </div>
-          </div>
-        );
-      }
-    });
-
-    var App = React.createClass({
-      render: function() {
-        return (
-          <div>
-            <div className="ui pointing menu">
-                <IndexLink to="/" className="item" activeClassName="active">Home</IndexLink>
-                <Link to="/stuff" className="item" activeClassName="active">Stuff</Link>
-                <Link to="/contact" className="item" activeClassName="active">Contact</Link>
-              <div className="right menu">
-                <div className="item">
-                </div>
-              </div>
-            </div>
-            <div className="content">
-             {this.props.children}
-            </div>
-          </div>
-        )
-      }
-    });
-
-    ReactDOM.render(
-      <Router>
-          <Route path="/" component={App}>
-            <IndexRoute component={Home} /> 
-            <Route path="/contact" component={Contact} />
-            <Route path="/stuff" component={Stuff}> 
-            </Route>
-          </Route> 
-      </Router>,
-      destination
-    );
-  </script>
 </body>
 </html>
