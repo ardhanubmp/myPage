@@ -46,9 +46,6 @@
     .content li {
       margin-bottom: 10px;
     }
-   /* .active {
-      background-color: #0099FF;
-    }*/
   </style>
 </head>
   
@@ -104,12 +101,15 @@
       render: function() {
         return (
           <div>
-           <h1>Welcome</h1>
-            <ul className="header">
-              <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-              <li><Link to="/stuff" activeClassName="active">Stuff</Link></li>
-              <li><Link to="/contact" activeClassName="active">Contact</Link></li>
-            </ul>
+            <div className="ui pointing menu">
+                <IndexLink to="/" className="item" activeClassName="active">Home</IndexLink>
+                <Link to="/stuff" className="item" activeClassName="active">Stuff</Link>
+                <Link to="/contact" className="item" activeClassName="active">Contact</Link>
+              <div className="right menu">
+                <div className="item">
+                </div>
+              </div>
+            </div>
             <div className="content">
              {this.props.children}
             </div>
